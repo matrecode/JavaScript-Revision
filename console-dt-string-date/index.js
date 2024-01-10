@@ -316,5 +316,13 @@ function addWorkDays(startDate, days){
 
 console.log(addWorkDays(new Date(), 10))
 
+// Comparing Date Values
+
+var dateAgain1 = new Date()
+var dateAgain2 = new Date(dateAgain1.valueOf() + 10)
+console.log("date1: " + dateAgain1 + "date2: " + dateAgain2, dateAgain1.valueOf() === dateAgain2.valueOf()) // false
+
+// Date difference Calculation 
+
 
 
