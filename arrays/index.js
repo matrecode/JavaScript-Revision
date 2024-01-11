@@ -28,4 +28,29 @@ let object = array.reduce(function(obj, current){
 
 console.log(object)
 
+// Map using reduce
+// map() creates the new array it doesn't modify the original one
 
+function map(list, fn){
+    return list.reduce(function(newList, item){
+        return newList.concat(fn(item))
+    }, [])
+}
+
+
+let result = map([1,2,3], function(n){return n*n})
+console.log(result)
+
+// Find Min or Max Value
+
+var arr = [4,2,1,-10,9]
+
+let resultMin = arr.reduce(function(a,b){
+    return a < b ? a : b
+}, Infinity)
+
+let resultMax = arr.reduce(function(a,b){
+    return a > b ? a : b
+}, -Infinity)
+
+console.log("Min: " +resultMin + ", Max: " + resultMax)
